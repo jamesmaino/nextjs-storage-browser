@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React from "react";
 import { Amplify } from "aws-amplify";
 import { signOut } from "aws-amplify/auth";
@@ -22,11 +22,12 @@ function Example() {
     config: createAmplifyAuthAdapter({
       options: {
         defaultPrefixes: [
-          "media-readwritedelete/",
-          "media-readonly/",
-          "shared-folder-readwrite/",
-          (identityId: string) => `protected-useronlyreadwritedelete/${identityId}/`,
-          (identityId: string) => `private-useronlyreadwritedelete/${identityId}/`,
+          // "media-readwritedelete/",
+          // "media-readonly/",
+          // "shared-folder-readwrite/",
+          // (identityId: string) => `protected-useronlyreadwritedelete/${identityId}/`,
+          (identityId: string) =>
+            `private-useronlyreadwritedelete/${identityId}/`,
         ],
       },
     }),
